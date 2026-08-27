@@ -8,7 +8,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn add_two_and_three_is_five(){
+    fn add_two_and_three_is_five() {
         assert_eq!(add(2, 3), 5);
     }
 }
