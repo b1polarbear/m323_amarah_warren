@@ -1,9 +1,6 @@
 // Competence 1A-Beginner
 // Task: Meaning of functions and their input/output. Examples of a pure and impure function. Explain referential transparency and why a function is trivially testable.
 
-
-
-
 // Pure Function - Same input, same output
 pub fn celsius_to_fahrenheit(celsius: f64) -> f64 {
     (celsius * 9.0 / 5.0) + 32.0
