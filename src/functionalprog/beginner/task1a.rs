@@ -7,8 +7,8 @@ pub fn celsius_to_fahrenheit(celsius: f64) -> f64 {
 }
 
 // Impure function - accesses outside world
-pub fn greet_user(name: &str) -> String {
-    println(format!("Hello, {}!", name));
+pub fn greet_user(name: &str) {
+    println!("Hello, {}!", name);
 }
 
 // Note: Impure functions can be impure by having side effects or accessing the outside world
