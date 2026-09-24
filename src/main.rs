@@ -5,5 +5,5 @@ fn main() {
     println!("{}", celsius_to_fahrenheit(0.0));
     println!("{}", celsius_to_fahrenheit(100.0));
 
-    println!("{}", greet_user("Alice"));
+    greet_user("Alice");
 }
