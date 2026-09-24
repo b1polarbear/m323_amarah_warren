@@ -1,8 +1,8 @@
 use std::io;
+mod functionalprog;
 
 use crate::functionalprog::beginner::first_lesson::add;
-
-mod functionalprog;
+use functionalprog::beginner::task1a::{celsius_to_fahrenheit, greet_user};
 
 fn main() {
     // Borrowing
@@ -21,4 +21,9 @@ fn main() {
 
     println!("2 + 3 = {}", add(2, 3));
     println!("{} {}", title, year);
+
+    println!("{}", celsius_to_fahrenheit(0.0));
+    println!("{}", celsius_to_fahrenheit(100.0));
+
+    greet_user("Alice");
 }
