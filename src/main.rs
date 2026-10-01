@@ -1,6 +1,7 @@
 use std::io;
 
 use crate::functionalprog::beginner::first_lesson::add;
+use crate::functionalprog::beginner::task1b::run_task1b;
 
 mod functionalprog;
 
@@ -21,4 +22,7 @@ fn main() {
 
     println!("2 + 3 = {}", add(2, 3));
     println!("{} {}", title, year);
+
+    // Task 1B
+    run_task1b();
 }
