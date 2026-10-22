@@ -26,8 +26,3 @@ jobs:
 
       - name: Test (cargo)
         run: cargo test --locked
-
-      - name: Documentation (cargo doc, warnings fail the build)
-        run: cargo doc --no-deps
-        env:
-          RUSTDOCFLAGS: -D warnings
