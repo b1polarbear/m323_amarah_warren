@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust (rustup) with clippy and rustfmt
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Check formatting (rustfmt)
+        run: cargo fmt --all -- --check
+
+      - name: Lint (clippy, warnings fail the build)
+        run: cargo clippy --all-targets -- -D warnings
+
+      - name: Build (cargo, uses Cargo.lock)
+        run: cargo build --locked
+
+      - name: Test (cargo)
+        run: cargo test --locked
+
+      - name: Documentation (cargo doc, warnings fail the build)
+        run: cargo doc --no-deps
+        env:
+          RUSTDOCFLAGS: -D warnings
