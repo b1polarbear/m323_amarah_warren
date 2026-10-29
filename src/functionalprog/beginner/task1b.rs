@@ -60,7 +60,7 @@ pub fn run() {
 
     println!("\nLazyLock<Mutex<T>>: This is a list or value that can also be changed.");
     log_message("hello");
-    println!("-----------------------------------------------------------------------");
+    println!("----------------------------------------------------------------------");
 }
 
 // Test
