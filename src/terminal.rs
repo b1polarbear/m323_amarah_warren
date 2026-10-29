@@ -49,7 +49,7 @@ fn functional_programming_menu() {
 fn functional_beginner_menu() {
     println!("\nFunctional Programming - Beginner");
     println!("1A. Task 1A");
-    // println!("1B. Task 1B");
+    println!("1B. Task 1B");
 
     print!("Choose a task: ");
     io::stdout().flush().unwrap();
@@ -59,7 +59,7 @@ fn functional_beginner_menu() {
 
     match task.trim().to_lowercase().as_str() {
         "1a" => crate::functionalprog::beginner::task1a::run(),
-        // "1b" => crate::functionalprog::beginner::task1b::run(),
+        "1b" => crate::functionalprog::beginner::task1b::run(),
         _ => println!("Invalid task"),
     }
 }
