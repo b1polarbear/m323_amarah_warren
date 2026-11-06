@@ -22,8 +22,23 @@ pub fn sum_of_evens_declarative(numbers: &[i32]) -> i32 {
         .sum() // add them up (the return type i32 tells Rust what to sum into)
 }
 
+let numbers = [1, 2, 3, 4, 5, 6];
 
+pub fn run() {
+    println!("\nCompetence 3A-Beginner");
+    println!("----------------------");
 
+    println!("\nDeclarative vs imperative");
+    println!("Imperative: explain step by step what needs to be done. For example: A cookbook gives you instructions on how to make spaghetti.");
+    println!("Declarative: describe what we want, and let the pc figure it out. For example: You get in to a Taxi and tell him 'Take me to Migros'. You don't care what route he takes, as long as you get to your destination.");
+
+    println!("\nExample with the list: 1,2,3,4,5,6");
+    println!("Imperative: {}", sum_of_evens_imperative(&numbers));
+    println!("Declarative: {}", sum_of_evens_declarative(&numbers));
+    
+    println!("\nThey both return the same value.");
+    println!("-----------------------------------")
+}
 
 #[cfg(test)]
 mod tests {
