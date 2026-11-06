@@ -18,12 +18,13 @@ pub fn run_menu() {
     match choice.trim() {
         "1" => functional_programming_menu(),
         // "2" => functions_menu(),
-        // "3" => println!("Topic 3"),
+        "3" => pointers_menu(),
         "4" => miscellaneous_menu(),
         _ => println!("Invalid choice"),
     }
 }
 
+// (1) Functional Programming
 fn functional_programming_menu() {
     println!("\nFunctional Programming");
     println!("1. Beginner");
@@ -64,6 +65,50 @@ fn functional_beginner_menu() {
     }
 }
 
+// (2) Functions with 
+
+// (3) Pointers
+fn pointers_menu() {
+    println!("\nPointers");
+    println!("1. Beginner");
+    println!("2. Intermediate");
+    println!("3. Advanced");
+    println!("4. Expert");
+
+    print!("Choose difficulty: ");
+    io::stdout().flush().unwrap();
+
+    let mut difficulty = String::new();
+    io::stdin().read_line(&mut difficulty).unwrap();
+
+    match difficulty.trim() {
+        "1" => pointers_beginner_menu(),
+        // "2" => functional_intermediate_menu(),
+        // "3" => functional_advanced_menu(),
+        // "4" => functional_expert_menu(),
+        _ => println!("Invalid difficulty"),
+    }
+}
+
+fn pointers_beginner_menu() {
+    println!("\nFunctional Programming - Beginner");
+    println!("3A. Task 3A");
+    // println!("3B. Task 3B");
+
+    print!("Choose a task: ");
+    io::stdout().flush().unwrap();
+
+    let mut task = String::new();
+    io::stdin().read_line(&mut task).unwrap();
+
+    match task.trim().to_lowercase().as_str() {
+        "3A" => crate::functionalprog::beginner::task3a::run(),
+        // "3b" => crate::functionalprog::beginner::task3b::run(),
+        _ => println!("Invalid task"),
+    }
+}
+
+// (4) Miscellaneous
 fn miscellaneous_menu() {
     println!("\nFunctional Programming");
     println!("1. Beginner");
