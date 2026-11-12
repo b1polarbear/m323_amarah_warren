@@ -83,15 +83,15 @@ fn pointers_menu() {
 
     match difficulty.trim() {
         "1" => pointers_beginner_menu(),
-        // "2" => functional_intermediate_menu(),
-        // "3" => functional_advanced_menu(),
-        // "4" => functional_expert_menu(),
+        // "2" => ,
+        // "3" => ,
+        // "4" => ,
         _ => println!("Invalid difficulty"),
     }
 }
 
 fn pointers_beginner_menu() {
-    println!("\nFunctional Programming - Beginner");
+    println!("\nPointers - Beginner");
     println!("3A. Task 3A");
     // println!("3B. Task 3B");
 
@@ -102,7 +102,7 @@ fn pointers_beginner_menu() {
     io::stdin().read_line(&mut task).unwrap();
 
     match task.trim().to_lowercase().as_str() {
-        "3A" => crate::functionalprog::beginner::task3a::run(),
+        "3a" => crate::functionalprog::beginner::task3a::run(),
         // "3b" => crate::functionalprog::beginner::task3b::run(),
         _ => println!("Invalid task"),
     }
