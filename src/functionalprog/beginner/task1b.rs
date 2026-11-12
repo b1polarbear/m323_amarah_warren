@@ -59,7 +59,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn total_price_works() {
+    fn total_price_returns120() {
         // 2 tickets x 50 = 100, plus 10 kg x 2 = 20, total 120
         assert_eq!(total_price(2, 10, 50), 120);
     }
