@@ -65,7 +65,7 @@ fn functional_beginner_menu() {
     }
 }
 
-// (2) Functions with 
+// (2) Functions with
 
 // (3) Pointers
 fn pointers_menu() {
