@@ -6,11 +6,11 @@
 use std::sync::atomic::{AtomicI32, Ordering};
 use std::sync::{LazyLock, Mutex};
 
-// const: fixed baggage fee per kg
+// const: fixed baggage fee per kg, printed on the airline website. Never changes.
 pub const BAGGAGE_FEE_PER_KG: i32 = 2;
 
-// AtomicI32: the airline's current base price per ticket. 
-// changes safely
+// AtomicI32: the airline's current base price per ticket. The airline can change it,
+// and each change happens in one safe step.
 static BASE_PRICE: AtomicI32 = AtomicI32::new(50);
 
 // LazyLock<Mutex<T>>: a booking log, created on first use. Mutex allows only one writer at a time.
@@ -37,16 +37,9 @@ pub fn log_booking(text: &str) {
 }
 
 pub fn run() {
+    println!("-----------------------");
     println!("\nCompetence 1B-Beginner");
-    println!("----------------------");
-
-    println!("Const: A Constant (const) can never be changed.");
-    println!("AtomicI32: is a number that many parts of the program can change safely, one at a time");
-    println!("LazyLock<Mutex<T>>: is a list or value that is created on first use, and locked while someone edits it");
-    println!("----------------------");
-  
-    println!("\nWe use an airline as an example:");
-    println!("Each time we have 2 Tickets and 10kg Baggage.")
+    println!("-----------------------");
 
     println!("const: baggage fee per kg = {}", BAGGAGE_FEE_PER_KG);
     println!("Pure total for 2 tickets, 10 kg, base 50: {}", total_price(2, 10, 50));
@@ -60,7 +53,7 @@ pub fn run() {
     println!("Bookings logged = {}", BOOKING_LOG.lock().unwrap().len());
 }
 
-// Test (pure function)
+// Test (only for the pure function)
 #[cfg(test)]
 mod tests {
     use super::*;
