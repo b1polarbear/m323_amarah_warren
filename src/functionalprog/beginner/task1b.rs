@@ -42,11 +42,20 @@ pub fn run() {
     println!("-----------------------");
 
     println!("const: baggage fee per kg = {}", BAGGAGE_FEE_PER_KG);
-    println!("Pure total for 2 tickets, 10 kg, base 50: {}", total_price(2, 10, 50));
+    println!(
+        "Pure total for 2 tickets, 10 kg, base 50: {}",
+        total_price(2, 10, 50)
+    );
 
-    println!("\nAtomicI32: current total before raise = {}", current_total(2, 10));
+    println!(
+        "\nAtomicI32: current total before raise = {}",
+        current_total(2, 10)
+    );
     airline_raises_price(5);
-    println!("AtomicI32: current total after raise by 5 = {}", current_total(2, 10));
+    println!(
+        "AtomicI32: current total after raise by 5 = {}",
+        current_total(2, 10)
+    );
 
     println!("\nLazyLock<Mutex<T>>: booking log");
     log_booking("Booking: 2 tickets, 10 kg");
