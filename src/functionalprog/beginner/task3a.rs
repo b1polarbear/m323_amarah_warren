@@ -34,7 +34,7 @@ pub fn run() {
         "Imperative: explain step by step what needs to be done. For example: A cookbook gives you step by step instructions on how to make spaghetti."
     );
     println!(
-        "Declarative: describe what we want, and let the pc figure it out. For example: You get in to a Taxi and tell him 'Take me to Migros'. You don't care what route he takes, as long as you get to your destination."
+        "Declarative: describe what we want, and let rust figure it out. For example: You get in to a Taxi and tell him 'Take me to Migros'. You don't care what route he takes, as long as you get to your destination."
     );
 
     println!("\nExample with the list: 1,2,3,4,5,6");
